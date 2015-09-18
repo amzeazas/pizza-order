@@ -8,7 +8,14 @@ describe('Pizza', function() {
 
   it("adds the cost to all pizzas", function() {
     var testPizza = new Pizza("1", "large");
-    expect(testPizza.cost()).to.equal(11)
+    expect(testPizza.cost()).to.equal(9)
+  });
+
+  it("adds the cost of toppings to total cost of pizza", function() {
+    var testPizza = new Pizza("2", "medium");
+    var testTopping = new Topping("pepperoni", "double");
+    testPizza.toppings.push(testTopping);
+    expect(testPizza.cost()).to.equal(20);
   });
 });
 
