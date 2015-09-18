@@ -35,7 +35,7 @@ $(document).ready(function() {
       var newTopping = new Topping(inputtedTopping);
       newPizza.toppings.push(newTopping);
     });
-    console.log(newPizza.toppings)
+
     var totalCost = newPizza.cost()
 
     $("#pizza-price").show()
