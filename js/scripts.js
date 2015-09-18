@@ -16,3 +16,8 @@ Pizza.prototype.cost = function() {
   total = total + (this.quantity * 2);
   return total;
 }
+
+function Topping(name, amount) {
+  this.name = name;
+  this.amount = amount;
+}
