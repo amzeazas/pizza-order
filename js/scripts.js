@@ -13,7 +13,10 @@ Pizza.prototype.cost = function() {
   } else {
     total = total + 9;
   }
-  total = total + (this.quantity * 2);
+  this.toppings.forEach(function(topping) {
+    total = total + topping.cost()
+  });
+  total = total * this.quantity;
   return total;
 }
 
