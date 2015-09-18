@@ -13,9 +13,7 @@ Pizza.prototype.cost = function() {
   } else {
     total = total + 9;
   }
-  this.toppings.forEach(function(topping) {
-    total = total + topping.cost()
-  });
+  total = total + this.toppings.length;
   total = total * this.quantity;
   return total;
 }
@@ -24,7 +22,24 @@ function Topping(name) {
   this.name = name;
 }
 
-Topping.prototype.cost = function() {
-  var total = 1
-  return total;
-}
+$(document).ready(function() {
+  $("#order-form").submit(function(event) {
+    event.preventDefault();
+
+    var inputtedQuantity = $("#amount").val();
+    var inputtedSize = $("#size").val();
+    var newPizza = new Pizza(inputtedQuantity, inputtedSize)
+
+    $("input:checkbox[name=topping]:checked").each(function() {
+      var inputtedTopping = $(this).val();
+      var newTopping = new Topping(inputtedTopping);
+      newPizza.toppings.push(newTopping);
+    });
+    console.log(newPizza.toppings)
+    var totalCost = newPizza.cost()
+
+    $("#pizza-price").show()
+    $("#order-price").text(totalCost);
+
+  });
+});
