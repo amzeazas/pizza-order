@@ -20,17 +20,11 @@ Pizza.prototype.cost = function() {
   return total;
 }
 
-function Topping(name, amount) {
+function Topping(name) {
   this.name = name;
-  this.amount = amount;
 }
 
 Topping.prototype.cost = function() {
   var total = 1
-  if (this.amount === "normal") {
-    total = total + 1;
-  } else {
-    total = total + 2;
-  }
   return total;
 }

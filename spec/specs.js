@@ -13,21 +13,20 @@ describe('Pizza', function() {
 
   it("adds the cost of toppings to total cost of pizza", function() {
     var testPizza = new Pizza("2", "medium");
-    var testTopping = new Topping("pepperoni", "double");
+    var testTopping = new Topping("pepperoni");
     testPizza.toppings.push(testTopping);
-    expect(testPizza.cost()).to.equal(20);
+    expect(testPizza.cost()).to.equal(16);
   });
 });
 
 describe('Toppings', function() {
   it("creates new toppings with the given specifications", function() {
-    var testTopping = new Topping("pepperoni", "normal");
+    var testTopping = new Topping("pepperoni");
     expect(testTopping.name).to.equal("pepperoni");
-    expect(testTopping.amount).to.equal("normal");
   });
 
   it("adds the cost to all toppings", function() {
-    var testTopping = new Topping("pepperoni", "normal");
-    expect(testTopping.cost()).to.equal(2);
+    var testTopping = new Topping("pepperoni");
+    expect(testTopping.cost()).to.equal(1);
   });
 });
