@@ -16,8 +16,8 @@
       <h3>Cowabunga, dude! Here at TMNT Pizza, we pride ourselves on our most excellect pies. Order what you want and we'll deliver your righteous pizza straight to your door (or sewer drain). Party on!</h3>
     </center>
     <br>
-    <div class="pizza-builder">
-      <form id="builder">
+    <div class="pizza-order">
+      <form id="order-form">
         <div class='col-sm-4 form-group'>
           <label for="size">What size of pie would you like?</label>
           <select id="size" class="form-control">
@@ -42,17 +42,17 @@
           </select>
         </div>
         <div class='col-sm-4 form-group'>
-          <label for="amount">What awesome toppings do you want on your delicious pizza?</label>
-          <input type='checkbox' name='topping' class='topping-selection'> Pepperoni <br>
-          <input type='checkbox' name='topping' class='topping-selection'> Olives <br>
-          <input type='checkbox' name='topping' class='topping-selection'> Mushrooms <br>
-          <input type='checkbox' name='topping' class='topping-selection'> Pineapple <br>
-          <input type='checkbox' name='topping' class='topping-selection'> Sausage <br>
-          <input type='checkbox' name='topping' class='topping-selection'> Cheese <br>
-          <input type='checkbox' name='topping' class='topping-selection'> Anchovies <br>
-          <input type='checkbox' name='topping' class='topping-selection'> Marshmallows <br>
-          <input type='checkbox' name='topping' class='topping-selection'> Peanut Butter <br>
-          <input type='checkbox' name='topping' class='topping-selection'> Clams <br>
+          <label for="topping">What awesome toppings do you want on your delicious pizza?</label>
+          <input type='checkbox' name='topping' class='topping-selection' value="pepperoni"> Pepperoni <br>
+          <input type='checkbox' name='topping' class='topping-selection' value="olives"> Olives <br>
+          <input type='checkbox' name='topping' class='topping-selection' value="mushrooms"> Mushrooms <br>
+          <input type='checkbox' name='topping' class='topping-selection' value="pineapple"> Pineapple <br>
+          <input type='checkbox' name='topping' class='topping-selection' value="sausage"> Sausage <br>
+          <input type='checkbox' name='topping' class='topping-selection' value="cheese"> Extra Cheese <br>
+          <input type='checkbox' name='topping' class='topping-selection' value="anchovies"> Anchovies <br>
+          <input type='checkbox' name='topping' class='topping-selection' value="marshmallows"> Marshmallows <br>
+          <input type='checkbox' name='topping' class='topping-selection' value="peanut-butter"> Peanut Butter <br>
+          <input type='checkbox' name='topping' class='topping-selection' value="clams"> Clams <br>
         </div>
         <br>
         <button type="submit" class="btn btn-success">Place your most excellent order!</button>
@@ -63,8 +63,8 @@
     <div class="result" id='pizza-price'>
       <h3>Your pizza will cost $<span id='order-price'></span>.</h3>
       <br>
-      <form action='index.html' method='post'>
-        <button class='btn btn-warning'>Order Another Pizza</button>
+      <form action='pizza.html' method='post'>
+        <button id="restart" class='btn btn-warning'>Order Another Pizza</button>
       </form>
     </div>
   </div>
