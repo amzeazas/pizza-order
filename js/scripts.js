@@ -21,3 +21,13 @@ function Topping(name, amount) {
   this.name = name;
   this.amount = amount;
 }
+
+Topping.prototype.cost = function() {
+  var total = 1
+  if (this.amount === "normal") {
+    total = total + 1;
+  } else {
+    total = total + 2;
+  }
+  return total;
+}
