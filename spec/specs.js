@@ -11,3 +11,11 @@ describe('Pizza', function() {
     expect(testPizza.cost()).to.equal(11)
   });
 });
+
+describe('Toppings', function() {
+  it("creates new toppings with the given specifications", function() {
+    var testTopping = new Topping("pepperoni", "normal");
+    expect(testTopping.name).to.equal("pepperoni");
+    expect(testTopping.amount).to.equal("normal");
+  });
+});
