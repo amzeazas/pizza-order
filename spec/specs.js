@@ -3,11 +3,11 @@ describe('Pizza', function() {
     var testPizza = new Pizza("1", "large");
     expect(testPizza.quantity).to.equal("1");
     expect(testPizza.size).to.equal("large");
-    expect(testPizza.toppings).to.eql([11]);
+    expect(testPizza.toppings).to.eql([]);
   });
 
   it("adds the cost to all pizzas", function() {
     var testPizza = new Pizza("1", "large");
-    expect(testPizza.cost()).to.equal()
+    expect(testPizza.cost()).to.equal(11)
   });
 });
