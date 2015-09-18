@@ -24,9 +24,4 @@ describe('Toppings', function() {
     var testTopping = new Topping("pepperoni");
     expect(testTopping.name).to.equal("pepperoni");
   });
-
-  it("adds the cost to all toppings", function() {
-    var testTopping = new Topping("pepperoni");
-    expect(testTopping.cost()).to.equal(1);
-  });
 });
